@@ -1,0 +1,48 @@
+<%inherit file="layout.html" />
+
+<%def name="title()"></%def>
+
+  <div class='title'>
+    <span>${name}</span>
+    <div class='toolbar'>
+      <ul class='timepanel'>
+        <li class='timepanel live selected'>
+          <a class='play' href='#'>live</a>
+        </li>
+        <li class='timepanel'>
+          <a class='range' href='#' title='60'>1h</a>
+        </li>
+        <li class='timepanel'>
+          <a class='range' href='#' title='180'>3h</a>
+        </li>
+        <li class='timepanel'>
+          <a class='range' href='#' title='1440'>1d</a>
+        </li>
+        <li class='timepanel'>
+          <a class='range' href='#' title='10080'>1w</a>
+        </li>
+      </ul>
+      <ul class='toggle'>
+        <li class='toggle-nonum'>
+          <a href='#'>
+            <img src='/i/toggle-number.png' />
+          </a>
+        </li>
+        <li class='toggle-night'>
+          <a href='#'>
+            <img src='/i/toggle-night.png' />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class='main'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var url = "${graphite_url}";
+        var auth = "";
+      //]]>
+    </script>
+    <script src='/dashboards/${name}.js' type='text/javascript'></script>
+    <script src='/j/potasio.js' type='text/javascript'></script>
+  </div>

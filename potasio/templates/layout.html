@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <title>${self.title()}</title>
+      ${self.style()}
+      ${self.javascript()}
+  </head>
+  <body>
+    ${self.body()}
+
+  </body>
+
+<%def name="title()">
+    Potasio
+</%def>
+
+<%def name="style()">
+  <link href='/c/style.css' rel='stylesheet' type='text/css' />
+</%def>
+
+<%def name="javascript()">
+  <script src='/j/jquery.min.js' type='text/javascript'></script>
+  <script src='/j/d3.v2.min.js' type='text/javascript'></script>
+  <script src='/j/rickshaw.min.js' type='text/javascript'></script>
+  <script src='/j/crypto-min.js' type='text/javascript'></script>
+</%def>
+
+
+
+</html>
